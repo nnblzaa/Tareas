@@ -41,8 +41,10 @@ Calcula porcentajes y redacta análisis y conclusiones.
 Devuelve a la página el mensaje de confirmación o el reporte.
 Publicación de la página para aplicar la encuesta desde el celular
 ## Imagen
-<img width="5712" height="4284" alt="image" src="https://github.com/user-attachments/assets/1aeab424-3e16-417d-a555-cd35cfda0484" />
-<img width="1170" height="791" alt="image" src="https://github.com/user-attachments/assets/b5e5106a-ca54-4a39-9730-8d2da5de9e06" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/4364c9e6-35ab-4fda-8e58-9c8e190eea33" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/18474b6f-ff33-4423-b931-35eb964c4e16" />
+
+
 
 ## Video
 [Video](https://youtube.com/shorts/QauQs2S7ddI?si=g9ITLb_4faRAbpVY)
