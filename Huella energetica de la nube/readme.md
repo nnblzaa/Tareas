@@ -22,8 +22,9 @@ necesita.
 GitHub Pages Publicación de la página.
 Bienestar digital / Tiempo en pantalla Medir el uso por tipo de app
 ## Imagen
-<img width="5712" height="4284" alt="image" src="https://github.com/user-attachments/assets/1aeab424-3e16-417d-a555-cd35cfda0484" />
-<img width="1170" height="791" alt="image" src="https://github.com/user-attachments/assets/b5e5106a-ca54-4a39-9730-8d2da5de9e06" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/60160ede-b25f-45cc-9e0a-efeb418896a5" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/9ca8e24d-2dc2-48b7-8c99-016f471b3450" />
+
 
 ## Video
 [Video](https://youtube.com/shorts/f97OLORd4mA?si=LQWSl3Wts0P-HhUc)
