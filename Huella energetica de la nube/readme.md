@@ -12,8 +12,7 @@ Al terminar, el alumno es capaz de: (1) definir externalidad negativa e internal
 conectada a un webhook de Make y a un agente de IA; y (4) contrastar las suposiciones de la IA con fuentes
 y proponer cambios en su uso digital.
 ## Resultados
-[PDF](https://github.com/nnblzaa/Desarrollom-Tareas-/blob/main/Biodiversidad/Resultados/Biodiversidad_Nicolas_Niebla.pdf)
-
+[PDF](https://github.com/nnblzaa/Tareas/blob/main/Huella%20energetica%20de%20la%20nube/Resultados/Practica_4_3_Huella_Energetica_de_la_Nube.pdf)
 ## Material y herramientas utilizadas
 IA generativa Generar el código de index.html con el prompt de la práctica.
 Make > Custom webhook Recibe los ocho datos de uso enviados por la página.
@@ -27,7 +26,7 @@ Bienestar digital / Tiempo en pantalla Medir el uso por tipo de app
 <img width="1170" height="791" alt="image" src="https://github.com/user-attachments/assets/b5e5106a-ca54-4a39-9730-8d2da5de9e06" />
 
 ## Video
-[Video](https://youtube.com/shorts/5rdomOjkCKs?si=HP5nt_CLbh-SxsHx)
+[Video](https://youtube.com/shorts/f97OLORd4mA?si=LQWSl3Wts0P-HhUc)
 
 ## Codigo
 [main.txt](./codigo/main.txt)
