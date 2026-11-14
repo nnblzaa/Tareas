@@ -27,7 +27,9 @@ Filtro de Make Evita gastar créditos con stickers, fotos o comandos que empieza
 
 
 ## Imagen
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/ec0ab6ac-345a-4b8e-810c-c86accf2dd25" />
 
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/68fe9792-057c-4a18-a48f-c6f1246429b4" />
 
 
 
