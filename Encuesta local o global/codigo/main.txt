@@ -1,1 +1,255 @@
-
+{
+    "name": "Encuesta_Equipo#",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 3064104,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        },
+        {
+            "id": 2,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 3,
+                            "module": "google-sheets:addRow",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 10768677
+                            },
+                            "filter": {
+                                "name": "Ruta 1: respuesta",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.accion}}",
+                                            "b": "respuesta",
+                                            "o": "text:equal"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "mode": "map",
+                                "values": {
+                                    "0": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}",
+                                    "1": "{{1.comida}}",
+                                    "2": "{{1.ropa}}",
+                                    "3": "{{1.apps}}",
+                                    "4": "{{1.criterio}}",
+                                    "5": "{{1.origen}}",
+                                    "6": "{{1.edad}}"
+                                },
+                                "sheetId": "Respuestas",
+                                "spreadsheetId": "1QFquXd1ZINcvyg8V0Qqm9mfGpdL-xvEX91hEmkAE56U",
+                                "tableFirstRow": "A1:Z1",
+                                "insertDataOption": "INSERT_ROWS",
+                                "valueInputOption": "RAW",
+                                "insertUnformatted": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": -150
+                                }
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "module": "gateway:WebhookRespond",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "body": "Respuesta registrada. Gracias por participar.",
+                                "status": "200",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "text/plain; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": -150
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 5,
+                            "module": "google-sheets:filterRows",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 10768677
+                            },
+                            "filter": {
+                                "name": "Ruta 2: reporte",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.accion}}",
+                                            "b": "reporte",
+                                            "o": "text:equal"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "from": "drive",
+                                "limit": "288",
+                                "filter": [
+                                    [
+                                        {
+                                            "a": "A",
+                                            "o": "exist"
+                                        }
+                                    ]
+                                ],
+                                "orderBy": "",
+                                "sheetId": "Respuestas",
+                                "sortOrder": "",
+                                "spreadsheetId": "1QFquXd1ZINcvyg8V0Qqm9mfGpdL-xvEX91hEmkAE56U",
+                                "tableFirstRow": "A1:Z1",
+                                "includesHeaders": true
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": 150
+                                }
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "module": "util:TextAggregator",
+                            "version": 1,
+                            "parameters": {
+                                "feeder": 5,
+                                "rowSeparator": "\n"
+                            },
+                            "mapper": {
+                                "value": "{{5.`1`}} | {{5.`2`}} | {{5.`3`}} | {{5.`4`}} | {{5.`5`}} | {{5.`6`}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 150
+                                }
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "module": "ai-local-agent:RunLocalAIAgent",
+                            "version": 0,
+                            "parameters": {
+                                "makeConnectionId": 10653192
+                            },
+                            "mapper": {
+                                "files": [],
+                                "tools": [],
+                                "message": "Respuestas de la encuesta (comida | ropa | apps | criterio | origen | edad):\n{{6.text}}",
+                                "threadId": "",
+                                "outputType": "text",
+                                "tokenLimit": "100",
+                                "modelConfig": {
+                                    "timeout": "",
+                                    "recursionLimit": "300",
+                                    "aiCompactionEnabled": true,
+                                    "iterationsFromHistoryCount": "10"
+                                },
+                                "defaultModel": "medium",
+                                "systemPrompt": "Eres un analista de economia local para alumnos de Desarrollo Sustentable del TecNM en Mazatlan, Sinaloa.\n\nRecibiras las respuestas de una encuesta, una por linea, con el formato: comida | ropa | apps | criterio | origen | edad.\n\nUsa UNICAMENTE esas respuestas; no inventes datos.\n\nResponde en texto plano (sin asteriscos, sin markdown), en espanol, con este formato:\n\nTOTAL DE RESPUESTAS: [numero]\n\nRESULTADOS\n\nComida: [cada opcion con su porcentaje]\nRopa: [...]\nApps internacionales: [...]\nCriterio de compra: [...]\nConoce el origen: [...]\n\nANALISIS\n[4 lineas maximo: que tan local o global es el consumo de esta comunidad y que diferencias hay por edad]\n\nCONCLUSIONES\n\n1. [efecto en la economia local]\n2. [efecto ambiental por transporte y empaques]\n3. [una accion concreta para impulsar el consumo local]",
+                                "promptCaching": "none",
+                                "fallbackEnabled": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 150
+                                }
+                            },
+                            "tools": []
+                        },
+                        {
+                            "id": 8,
+                            "module": "gateway:WebhookRespond",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "body": "{{7.response}}",
+                                "status": "200",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "text/plain; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 150
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    }
+}
