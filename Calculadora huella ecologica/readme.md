@@ -21,8 +21,10 @@ Make > Webhook Response Devuelve el texto a la página con los encabezados neces
 GitHub Pages Publicación de la página.
 Global Footprint Network Definiciones y valores de referencia de México y del mundo.
 ## Imagen
-<img width="5712" height="4284" alt="image" src="https://github.com/user-attachments/assets/1aeab424-3e16-417d-a555-cd35cfda0484" />
-<img width="1170" height="791" alt="image" src="https://github.com/user-attachments/assets/b5e5106a-ca54-4a39-9730-8d2da5de9e06" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/f44d4650-0d25-4a5b-838f-69baeee06f7b" />
+
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/b954ef65-2fa8-4d7c-b7f9-8283735fc9bb" />
+
 
 ## Video
 [Video](https://youtube.com/shorts/52UqBctkCxs?si=kshGP4ojO9cRMwN0)
