@@ -34,7 +34,7 @@ Filtro de Make Evita gastar créditos con stickers, fotos o comandos que empieza
 
 
 ## Video
-[Video](https://youtube.com/shorts/nC4UmBKlh_A?si=mkAhSuSitssCLLQA)
+[Video](https://youtube.com/shorts/TGI23NTEhb8?si=9wVvTItnUvFFOeJF)
 
 ## Codigo
 [main.txt](./codigo/main.txt)
