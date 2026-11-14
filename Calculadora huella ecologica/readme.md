@@ -11,7 +11,7 @@ Al terminar, el alumno es capaz de: (1) definir huella ecológica, biocapacidad 
 una página conectada a Make y a un agente de IA; (3) comparar una estimación de IA con valores de
 referencia de México y del mundo; y (4) proponer acciones y estrategias económicas para reducir la huella.
 ## Resultados
-[PDF](https://github.com/nnblzaa/Desarrollom-Tareas-/blob/main/Biodiversidad/Resultados/Biodiversidad_Nicolas_Niebla.pdf)
+[PDF](https://github.com/nnblzaa/Tareas/blob/main/Calculadora%20huella%20ecologica/Resultados/Practica_4_5_Calculadora_de_Huella_Ecologica.pdf)
 
 ## Material y herramientas utilizadas
 IA generativa Generar index.html con el prompt de la práctica.
