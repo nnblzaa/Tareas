@@ -13,7 +13,7 @@ explicar qué es el PIB y cómo aportan distinto una compra local y una en plata
 un flujo página web - webhook - Router - Google Sheets - IA en Make; y (4) verificar con conteos propios los
 porcentajes que entrega una IA.
 ## Resultados
-[PDF](https://github.com/nnblzaa/Desarrollom-Tareas-/blob/main/Biodiversidad/Resultados/Biodiversidad_Nicolas_Niebla.pdf)
+[PDF](https://github.com/nnblzaa/Tareas/blob/main/Encuesta%20local%20o%20global/Resultados/Practica_4_2_Encuesta_Compras_Local_o_Global.pdf)
 
 ## Material y herramientas utilizadas
 IA generativa
